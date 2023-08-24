@@ -245,10 +245,7 @@ class _MainGridViewState extends State<MainGridView> {
     return Row(
       children: [
         NotificationListener<OverscrollIndicatorNotification>(
-          onNotification: (overscroll) {
-            overscroll.disallowGlow();
-            return true;
-          },
+          onNotification: (overscroll) => true,
           child: GridView.builder(
             shrinkWrap: true,
             padding: widget.headerPadding,
@@ -285,10 +282,7 @@ class _MainGridViewState extends State<MainGridView> {
     return Column(
       children: [
         NotificationListener<OverscrollIndicatorNotification>(
-          onNotification: (overscroll) {
-            overscroll.disallowGlow();
-            return true;
-          },
+          onNotification: (overscroll) => true,
           child: GridView.builder(
             shrinkWrap: true,
             padding: widget.headerPadding,
